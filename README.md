@@ -1,15 +1,15 @@
 # The Gilded Rose Code Kata
 
-[![Build Status](https://travis-ci.org/plainprogrammer/gilded_rose_kata.svg?branch=master)](https://travis-ci.org/plainprogrammer/gilded_rose_kata)
+![RSpec](https://github.com/plainprogrammer/GildedRose.rb/actions/workflows/rspec.yml/badge.svg)
 
 This is a refactoring kata, so you will be starting with a legacy
-code base.  To work this kata, clone this repo and checkout `master` before
+code base.  To work this kata, clone this repo and checkout `main` before
 pulling off a new branch to begin your work. Once you have your branch ready to
 work on, run `bin/rake` or `rspec spec/` to confirm your stating point is
 clean. As you make your refactorings, ensure you are running the test suite
 with the previously mentioned commands to ensure correctness.
 
-<hr />
+---
 
 # The Gilded Rose
 
@@ -61,22 +61,17 @@ Quality is 80 and it never alters.
 
 <hr />
 
-## Installation Hints
+## Installation
 
-The easiest way is to use bundler to install the dependencies. To do so, you need to install the bundler gem if you haven't already done so
+The easiest way is to use bundler to install and get setup.
 
     gem install bundler
-
-run bundler
-
-    bundle
-
-Have a look at the Gemfile for all dependencies.
+    bundle install
+    bundle exec rspec
 
 ## Git Branches
 
-* The `master` branch contains the starting point for the kata.
-* The `solution1` branch is Jim Weirich's first solution for this kata.
+* The `main` branch contains the starting point for the kata.
 
 ## Changes from the original
 
