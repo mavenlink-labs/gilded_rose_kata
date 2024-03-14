@@ -65,7 +65,8 @@ end
 
 def update_quality(items)
   items.each do |item|
-    ItemUpdater.new(item).update
+    item_updater = ItemUpdater.new(item)
+    item_updater.update
   end
 end
 
