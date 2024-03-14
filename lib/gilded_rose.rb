@@ -55,14 +55,18 @@ class ItemUpdater
       end
     end
   end
+
+  def update
+    update_item_quality
+    decrement_sell_in
+    update_expired_item
+  end
 end
 
 def update_quality(items)
   items.each do |item|
     item_updater = ItemUpdater.new(item)
-    item_updater.update_item_quality
-    item_updater.decrement_sell_in
-    item_updater.update_expired_item
+    item_updater.update
   end
 end
 
