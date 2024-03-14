@@ -132,6 +132,12 @@ RSpec.describe 'update_quality' do
 
           it { expect(item.quality).to eq(initial_quality) }
         end
+
+        context 'near max quality' do
+          let(:initial_quality) { 49 }
+
+          it { expect(item.quality).to eq(initial_quality + 1) }
+        end
       end
 
       context 'medium close to sell date (lower bound)' do
@@ -144,6 +150,12 @@ RSpec.describe 'update_quality' do
 
           it { expect(item.quality).to eq(initial_quality) }
         end
+
+        context 'near max quality' do
+          let(:initial_quality) { 49 }
+
+          it { expect(item.quality).to eq(initial_quality + 1) }
+        end
       end
 
       context 'very close to sell date (upper bound)' do
@@ -155,6 +167,18 @@ RSpec.describe 'update_quality' do
           let(:initial_quality) { 50 }
 
           it { expect(item.quality).to eq(initial_quality) }
+        end
+
+        context 'near max quality' do
+          let(:initial_quality) { 49 }
+
+          it { expect(item.quality).to eq(initial_quality + 1) }
+        end
+
+        context 'near max quality' do
+          let(:initial_quality) { 48 }
+
+          it { expect(item.quality).to eq(initial_quality + 2) }
         end
       end
 
