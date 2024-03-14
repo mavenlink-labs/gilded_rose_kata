@@ -65,6 +65,7 @@ end
 
 class BackstagePassUpdater < ItemUpdater
   def update_item_quality
+    return unless item.quality < 50
     if item.quality < 50
       item.quality += 1
       if item.sell_in < 11
