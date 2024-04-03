@@ -25,7 +25,7 @@ def update_quality(items)
           end
         end
         if item.name == 'Backstage passes to a TAFKAL80ETC concert'
-          item.quality = item.quality - item.quality
+          item.quality = 0
         end
       end
       if item.name == 'Aged Brie' && item.quality < 50
