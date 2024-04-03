@@ -11,6 +11,8 @@ def update_quality(items)
             item.quality += 1
           end
         end
+      end
+      if item.name == 'Backstage passes to a TAFKAL80ETC concert'
         if item.sell_in < 6
           if item.quality < 50
             item.quality += 1
