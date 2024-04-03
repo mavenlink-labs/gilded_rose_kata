@@ -30,7 +30,7 @@ def update_quality(items)
     if item.name == 'Backstage passes to a TAFKAL80ETC concert' && item.sell_in < 0
       item.quality = 0
     end
-    if item.sell_in < 0 &&  item.name == 'Aged Brie' && item.quality < 50
+    if item.name == 'Aged Brie' && item.sell_in < 0 && item.quality < 50
       item.quality += 1
     end
   end
