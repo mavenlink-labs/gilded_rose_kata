@@ -1,13 +1,11 @@
 def update_quality(items)
   items.each do |item|
     if item.name == 'Aged Brie'
-      if item.name == 'Aged Brie' && item.quality < 50
+      if item.quality < 50
         item.quality += 1
       end
-      if item.name == "Aged Brie"
-        item.sell_in -= 1
-      end
-      if item.name == 'Aged Brie' && item.sell_in < 0 && item.quality < 50
+      item.sell_in -= 1
+      if item.sell_in < 0 && item.quality < 50
         item.quality += 1
       end
     end
