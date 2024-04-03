@@ -13,10 +13,10 @@ def update_quality(items)
       if item.quality < 50
         item.quality += 1
       end
-      if item.quality < 50 && item.sell_in < 11 && item.quality < 50
+      if item.quality < 50 && item.sell_in < 11
         item.quality += 1
       end
-      if item.quality < 50 && item.sell_in < 6 && item.quality < 50
+      if item.quality < 50 && item.sell_in < 6
         item.quality += 1
       end
       item.sell_in -= 1
