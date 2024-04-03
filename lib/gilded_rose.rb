@@ -26,7 +26,8 @@ def update_quality(items)
         else
           item.quality = item.quality - item.quality
         end
-      else
+      end
+      if item.name == 'Aged Brie'
         if item.quality < 50
           item.quality += 1
         end
