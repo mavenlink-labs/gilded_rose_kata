@@ -23,7 +23,8 @@ def update_quality(items)
               item.quality -= 1
             end
           end
-        else
+        end
+        if item.name == 'Backstage passes to a TAFKAL80ETC concert'
           item.quality = item.quality - item.quality
         end
       end
