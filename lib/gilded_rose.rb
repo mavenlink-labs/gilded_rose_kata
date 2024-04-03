@@ -9,7 +9,7 @@ def update_quality(items)
         item.quality += 1
       end
     end
-    if (item.name == 'Aged Brie' || item.name == 'Backstage passes to a TAFKAL80ETC concert') && item.quality < 50 && item.name == 'Backstage passes to a TAFKAL80ETC concert' && item.sell_in < 6 && item.quality < 50
+    if item.quality < 50 && item.name == 'Backstage passes to a TAFKAL80ETC concert' && item.sell_in < 6 && item.quality < 50
       item.quality += 1
     end
     if item.name != 'Sulfuras, Hand of Ragnaros'
