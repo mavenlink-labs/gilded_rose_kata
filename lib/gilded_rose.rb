@@ -8,12 +8,8 @@ def update_quality(items)
       if item.name == 'Backstage passes to a TAFKAL80ETC concert' && item.sell_in < 11 && item.quality < 50
         item.quality += 1
       end
-      if item.name == 'Backstage passes to a TAFKAL80ETC concert'
-        if item.sell_in < 6
-          if item.quality < 50
-            item.quality += 1
-          end
-        end
+      if item.name == 'Backstage passes to a TAFKAL80ETC concert' && item.sell_in < 6 && item.quality < 50
+        item.quality += 1
       end
     end
     if item.name != 'Sulfuras, Hand of Ragnaros'
