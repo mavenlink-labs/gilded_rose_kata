@@ -22,7 +22,7 @@ def update_quality(items)
       if item.sell_in < 0
         item.quality = 0
       end
-    elsif !(item.name == 'Sulfuras, Hand of Ragnaros')
+    elsif item.name != 'Sulfuras, Hand of Ragnaros'
       if item.quality > 0
         item.quality -= 1
       end
