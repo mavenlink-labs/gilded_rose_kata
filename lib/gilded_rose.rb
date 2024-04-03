@@ -28,14 +28,16 @@ def update_quality(items)
         item.quality = 0
       end
     end
-    if !(item.name == 'Aged Brie' || item.name == 'Backstage passes to a TAFKAL80ETC concert' || item.name == 'Sulfuras, Hand of Ragnaros') && item.quality > 0
-      item.quality -= 1
-    end
-    if !(item.name == "Aged Brie" || item.name == 'Backstage passes to a TAFKAL80ETC concert' || item.name == 'Sulfuras, Hand of Ragnaros')
-      item.sell_in -= 1
-    end
-    if !(item.name == "Aged Brie" || item.name == 'Backstage passes to a TAFKAL80ETC concert' || item.name == 'Sulfuras, Hand of Ragnaros') && item.quality > 0 && item.sell_in < 0 &&
-      item.quality -= 1
+    if !(item.name == 'Aged Brie' || item.name == 'Backstage passes to a TAFKAL80ETC concert' || item.name == 'Sulfuras, Hand of Ragnaros')
+      if !(item.name == 'Aged Brie' || item.name == 'Backstage passes to a TAFKAL80ETC concert' || item.name == 'Sulfuras, Hand of Ragnaros') && item.quality > 0
+        item.quality -= 1
+      end
+      if !(item.name == "Aged Brie" || item.name == 'Backstage passes to a TAFKAL80ETC concert' || item.name == 'Sulfuras, Hand of Ragnaros')
+        item.sell_in -= 1
+      end
+      if !(item.name == "Aged Brie" || item.name == 'Backstage passes to a TAFKAL80ETC concert' || item.name == 'Sulfuras, Hand of Ragnaros') && item.quality > 0 && item.sell_in < 0 &&
+        item.quality -= 1
+      end
     end
   end
 end
