@@ -22,8 +22,7 @@ def update_quality(items)
       if item.sell_in < 0
         item.quality = 0
       end
-    end
-    if !(item.name == 'Aged Brie' || item.name == 'Backstage passes to a TAFKAL80ETC concert' || item.name == 'Sulfuras, Hand of Ragnaros')
+    elsif !(item.name == 'Aged Brie' || item.name == 'Backstage passes to a TAFKAL80ETC concert' || item.name == 'Sulfuras, Hand of Ragnaros')
       if item.quality > 0
         item.quality -= 1
       end
