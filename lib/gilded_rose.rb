@@ -27,10 +27,8 @@ def update_quality(items)
           item.quality = item.quality - item.quality
         end
       end
-      if item.name == 'Aged Brie'
-        if item.quality < 50
-          item.quality += 1
-        end
+      if item.name == 'Aged Brie' && item.quality < 50
+        item.quality += 1
       end
     end
   end
